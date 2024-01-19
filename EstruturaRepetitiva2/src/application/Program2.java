@@ -1,0 +1,29 @@
+package EstruturaRepetitiva2.src.application;
+
+import java.util.Scanner;
+
+public class Program2 {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int N = sc.nextInt();
+        int in = 0;
+        int out = 0;
+
+        for(int i = 0; i<N; i++){
+            int x = sc.nextInt();
+            if(x >= 10 && x <= 20){
+                x = sc.nextInt();
+                in += 1;
+            }else {
+                x = sc.nextInt();
+                out += 1;
+            }
+        }
+        System.out.println(in + " in");
+        System.out.println(out + " out");
+
+        sc.close();
+    }
+}
