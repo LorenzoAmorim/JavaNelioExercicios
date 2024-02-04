@@ -23,10 +23,13 @@ public class Program {
                 calculo += vect[i];
             }
         }
-        
-        double media = calculo/pares;
-        System.out.println("MEDIA DOS PARES = " + media);
 
+        if (pares == 0) {
+            System.out.println("NENHUM NUMERO PAR");
+        }else {
+            double media = calculo / pares;
+            System.out.println("MEDIA DOS PARES = " + media);
+        }
 
         sc.close();
     }
