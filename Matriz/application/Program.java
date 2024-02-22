@@ -32,7 +32,7 @@ public class Program {
                         System.out.println("Right: " + mat[i][j+1]);
                     }
                     if (i < mat.length-1) {
-                        System.out.println("Down: " + mat[i + 1][j]);
+                        System.out.println("Down: " + mat[i+1][j]);
                     }
                 }
             }
