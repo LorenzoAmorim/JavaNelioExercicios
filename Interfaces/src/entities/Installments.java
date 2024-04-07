@@ -1,0 +1,44 @@
+package Interfaces.src.entities;
+
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
+
+// parcelas
+public class Installments {
+    private static DateTimeFormatter df = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+
+    private LocalDate date;
+    private Double amount;
+
+    public Installments() {
+    }
+
+    public Installments(LocalDate date, Double amount) {
+        this.date = date;
+        this.amount = amount;
+    }
+
+    public LocalDate getDueDate() {
+        return date;
+    }
+
+    public void setDueDate(LocalDate dueDate) {
+        this.date = dueDate;
+    }
+
+    public Double getAmount() {
+        return amount;
+    }
+
+    public void setAmount(Double amount) {
+        this.amount = amount;
+    }
+
+    @Override
+    public String toString() {
+        return date.format(df)
+                + " - "
+                + String.format("%.2f", amount);
+    }
+}
