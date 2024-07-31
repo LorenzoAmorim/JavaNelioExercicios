@@ -3,17 +3,15 @@ package Interfaces.src.services;
 // Tipo de serviço de contrato
 public class PaypalService implements OnlinePaymentService {
 
-    // taxa de pagamento
+    // fee= taxas
     public Double paymentFee(Double amount) {
-//        double PercentFee = 0.0;
-//        PercentFee = interest()
-        return null;
+        double PercentFee = amount * 0.02;
+        return PercentFee;
     }
 
     // interest=juros
     public Double interest(Double amount, Integer months) {
-        double PercentInterest = 0.0;
-        PercentInterest = amount * 0.01;
-        return amount + PercentInterest * months;
+        double PercentInterest = amount * 0.01;
+        return PercentInterest * months;
     }
 }
