@@ -3,12 +3,13 @@ package Interfaces.src.services;
 // Tipo de serviço de contrato
 public class PaypalService implements OnlinePaymentService {
 
+    @Override
     // fee= taxas
     public Double paymentFee(Double amount) {
-        double PercentFee = amount * 0.02;
-        return PercentFee;
+        return amount * 0.02;
     }
 
+    @Override
     // interest=juros
     public Double interest(Double amount, Integer months) {
         double PercentInterest = amount * 0.01;
